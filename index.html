@@ -22,46 +22,41 @@
    		 	height: auto;
    			z-index: -100;
     		transform: translateX(-50%) translateY(-50%);
- 			background-size: cover;
+ 				background-size: cover;
   			transition: 1s opacity;
 		}
 .videotb{
-	min-width: 400px;
-	max-width: 400px;
-	margin: 50px;
+	min-width: 250px;
+	max-width: 250px;
+	margin: 25px;
 	height: auto;
 	background-color: white;
 }
 
 
 .videotb:hover{
-	min-width: 400px;
-	max-width: 400px;
+	min-width: 250px;
+	max-width: 250px;
 	height: auto;
 	background-color: teal;
 	color: white;
 }
-.videotb>p{
-	font-size: 2em;
+.VideoTitle{
+	font-size: 1.25em;
 	font-family: verdana;
 	min-width: 100%;
+	margin: 10px;
 	color: black;
 }
-.videotb>img, .videotb>p{
-
-	text-align: center;
-
-}
-.videotb>p{
-	vertical-align: center;
-}
-
-
-
 .thumbnails{
 		display: flex;
-
-		margin-top: 100%;
+		margin: 10px;
+}
+.Channel{
+	margin: 0px;
+}
+.description{
+	margin: 10px;
 }
 
 	</style>
@@ -70,53 +65,142 @@
 
 <body >
 <video autoplay="true" src="VIDEOS/1.mp4" type="video/mp4" id="videosource"></video>
-<div style="min-height:70%;"></div>
+
+
+<div style="margin-top:85%;">
 			<div class="thumbnails">
 					<div class="videotb" onclick="load()">
 						<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
-						<p>Video Title</p>
-						<br>
-					</div>
+						<p class="VideoTitle">Video Title</p>
+						<p>By<span class="Channel">Video Author</span></p>
+						<p>Video Description: This is the description of the Video</p>
+		  		</div>
+			<!--dummy -->
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
 
-						<!--dummy -->
-						<div class="videotb">
-							<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
-							<p>Video Title</p>
-							<br>
-							</div>
-						<div class="videotb">
-								<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
-								<p>Video Title</p>
-								<br>
-								</div>
-						<div class="videotb">
-									<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
-									<p>Video Title</p>
-									<br>
-									</div>
-						<div class="videotb">
-										<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
-										<p>Video Title</p>
-										<br>
-										</div>
-						<div class="videotb">
-											<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
-											<p>Video Title</p>
-											<br>
-											</div>
-						<div class="videotb">
-												<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
-												<p>Video Title</p>
-												<br>
-												</div>
-						<!--dummy -->
 
+ 		<!--dummy -->
 
+			</div>
 </div>
+<div>
+			<div class="thumbnails">
+					<div class="videotb" onclick="load()">
+						<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+						<p class="VideoTitle">Video Title</p>
+						<p>By<span class="Channel">Video Author</span></p>
+						<p class="description">Video Description: This is the description of the Video</p>
+		  		</div>
+			<!--dummy -->
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
 
 
+ 		<!--dummy -->
+
+			</div>
+</div>
+<div>
+			<div class="thumbnails">
+					<div class="videotb" onclick="load()">
+						<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+						<p class="VideoTitle">Video Title</p>
+						<p>By<span class="Channel">Video Author</span></p>
+						<p>Video Description: This is the description of the Video</p>
+		  		</div>
+			<!--dummy -->
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
+			<div class="videotb" onclick="load()">
+				<img src="https://static.toiimg.com/thumb/msid-59597948,width-640,resizemode-4/59597948.jpg" width="100%"></img>
+				<p class="VideoTitle">Video Title</p>
+				<p>By<span class="Channel">Video Author</span></p>
+				<p>Video Description: This is the description of the Video</p>
+			</div>
 
 
+ 		<!--dummy -->
+
+			</div>
 </div>
 
 
@@ -143,7 +227,7 @@
 <script type="text/javascript">
 
 function load(){
-	alert("Hello");
+
 	var vid = document.getElementById("videosource");
 	vid.src="VIDEOS/2.mp4";
 	vid.load();

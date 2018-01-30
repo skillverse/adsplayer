@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>Test using arrow keys to scroll a div element</title>
+
+    <style type="text/css">
+        div.scrollableDiv {
+            overflow: auto;
+            height: 300px;
+            width: 400px;
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        div.caption {
+            width: 400px;
+            font-weight: bold;
+            padding: 10px 3px;
+        }
+    </style>
+
+    <script language="JavaScript" type="text/javascript">
+        // Just use a global variable to keep track of our position in this example. Since
+        // I only have one div element, I can use a single variable. If you wanted to make
+        // multiple elements scrollable, you could use an array here, or elements in the
+        // document itself.
+        var scrollLocation = 0;
+
+        function checkForScroll(event, elementId, innerElementPrefix) {
+             // Get a handle to the element which will be scrolled
+            var el = document.getElementById(elementId);
+            if ( !el ) {
+                return;
+            }
+
+            // Get the current scroll offset.
+            var currentScroll = innerEl.scrollTop;
+            var latestScroll = currentScroll;
+
+            // Get a handle to the element inside the scrolled element that is our current
+            // scrolling target
+            var innerEl = document.getElementById(innerElementPrefix + scrollLocation);
+
+            // Check the event to see if they pressed a key we care about
+            if ( event.which == 63233 ) {
+                // They pressed the down arrow, we want to scroll down so long as we have
+                // an element to work with up until the point where we actually move the
+                // scroll amount.
+                while ( innerEl && currentScroll == latestScroll ) {
+                    // Attempt to scroll
+                    innerEl = document.getElementById(innerElementPrefix + (scrollLocation + 1));
+                    if ( innerEl ) {
+                        // There is such an element, move it into view and determine the new
+                        // scroll amount for our element
+                        scrollLocation++;
+                        innerEl.scrollIntoView();
+                        latestScroll = document.getElementById(elementId).scrollTop;
+                    }
+                }
+            } else if ( event.which == 63232 ) {
+                // They pressed the up arrow, we want to scroll up so long as we have
+                // an element to work with up until the point where we actually move the
+                // scroll amount.
+                while ( innerEl && currentScroll == latestScroll ) {
+                    // Attempt to scroll
+                    innerEl = document.getElementById(innerElementPrefix + (scrollLocation - 1));
+                    if ( innerEl ) {
+                        // There is such an element, move it into view and determine the new
+                        // scroll amount for our element
+                        scrollLocation--;
+                        innerEl.scrollIntoView();
+                        latestScroll = document.getElementById(elementId).scrollTop;
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- The event is onKeyPress of this element... season to taste. -->
+    <div class="scrollableDiv" id="divToScroll" onKeyPress="checkForScroll(event, 'divToScroll', 'scroll-')">
+        <p id="scroll-0">You can scroll this div element by placing the mouse over it, clicking, and
+        using the up and down arrow keys. This element does not have to be a div, it just is for
+        this example.</p>
+
+        <p id="scroll-1">For this example to work properly, each element in the div (this example
+        using paragraph elements, but anything will work) must have an ID attribute associated with
+        it where the ID attribute follows a pattern with an increasing number appended to the
+        end.</p>
+
+        <p>This paragraph has no ID attribute. Things still work, but the scrolling will skip this
+        paragraph. That may not matter depending on your content and the size of the div being
+        displayed. In this example, it is important that the numeric sequence not skip a value since
+        it stops once it no longer finds an element. This need not be the case though, you could
+        vary this behavior to suit your needs.</p>
+
+        <p id="scroll-2">There are a lot of other ways that this example could be done. This is just
+        one of the many was in which it can be made to work. You don't have to use a div, the event
+        does not need to be just on the div, and you can use any type of block elements within the
+        div to provide the scrolling.</p>
+
+        <ul>
+            <li id="scroll-3">I have now switched the elements in the div</li>
+            <li id="scroll-4">and it still works</li>
+            <li id="scroll-5">so long as the ID values maintain the same form.</li>
+            <li id="scroll-6">Note that since this elements are not as &quot;tall&quot;</li>
+            <li id="scroll-7">the scrolls take smaller steps</li>
+            <li id="scroll-8">when going through these elements.</li>
+        </ul>
+
+        <p id="scroll-9">Mix and match as you wish</p>
+
+        <p id="scroll-10">If you wanted to get really fancy, you could write a script to parse the
+        DOM inside the target scroll element, and you could then scroll through the elements
+        automatcially so that ID values are no longer needed. This may or may not result in the
+        behavior you want based on the nature of your content.</p>
+    </div>
+    <div class="caption">Click on the scroll area above and then use the up and down arrow keys to
+    scroll.</div>
+</body>
+</html>
